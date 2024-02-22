@@ -8,9 +8,9 @@ public class Recursividad {
 		
 		//imprimirNNumeros2(5);
 		
-		System.out.println(cantidadDigitos(6435));
-		
-		
+		//System.out.println(cantidadDigitos(6435));
+		//System.out.println(fibonacci(10));
+		System.out.println(elevar(2,2));
 		
 	}
 	
@@ -52,7 +52,24 @@ public class Recursividad {
 		 
 	}
 	
-	public static void fibonacci(int n) {
+	public static int fibonacci(int n) {
+		
+		if(n>1) {
+			return fibonacci(n-1) + fibonacci(n-2);
+		}else if(n==1) {
+			return 1;
+		}else {
+			return 0;
+		}
+	}
+	
+	public static int elevar(int base, int exponente) {
+		
+		if(exponente == 0) return 1;
+		else if(exponente == 1) return base;
+		else {
+			return base * elevar(base, exponente-1);
+		}
 		
 	}
 }
